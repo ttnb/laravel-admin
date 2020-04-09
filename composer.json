@@ -1,0 +1,29 @@
+{
+    "name": "stackviet/laravel-admin",
+    "description": "Laravel Admin",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stackviet",
+            "email": "stackviet@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Stackviet\\LaravelAdmin\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Stackviet\\LaravelAdmin\\LaravelAdminServiceProvider"
+            ]
+        }
+    }
+}
