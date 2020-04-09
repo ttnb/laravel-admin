@@ -1,9 +1,9 @@
 <?php
 
-namespace Stackviet\LaravelAdmin;
+namespace MySang\LaravelAdmin;
 
 use Illuminate\Support\ServiceProvider;
-use Stackviet\LaravelAdmin\Roles;
+use MySang\LaravelAdmin\Roles;
 
 class LaravelAdminServiceProvider extends ServiceProvider
 {

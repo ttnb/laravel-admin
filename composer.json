@@ -1,19 +1,19 @@
 {
-    "name": "stackviet/laravel-admin",
+    "name": "mysang/laravel-admin",
     "description": "Laravel Admin",
     "type": "project",
     "license": "MIT",
     "authors": [
         {
-            "name": "Stackviet",
-            "email": "stackviet@gmail.com"
+            "name": "My Sang",
+            "email": "sangnck@gmail.com"
         }
     ],
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "psr-4": {
-            "Stackviet\\LaravelAdmin\\": "src/"
+            "MySang\\LaravelAdmin\\": "src/"
         }
     },
     "extra": {
@@ -22,7 +22,7 @@
         },
         "laravel": {
             "providers": [
-                "Stackviet\\LaravelAdmin\\LaravelAdminServiceProvider"
+                "MySang\\LaravelAdmin\\LaravelAdminServiceProvider"
             ]
         }
     }

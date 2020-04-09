@@ -1,6 +1,6 @@
 <?php
 
-namespace Stackviet\LaravelAdmin;
+namespace MySang\LaravelAdmin;
 
 class Roles
 {

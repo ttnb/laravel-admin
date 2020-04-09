@@ -4,7 +4,7 @@ $getRoles = config('laraveladmin.roles');
 $roles = (array) @array_keys($getRoles);
 
 
-// Route::namespace('Stackviet\LaravelAdmin\Controllers')
+// Route::namespace('MySang\LaravelAdmin\Controllers')
 //     ->name('admin')
 //     ->prefix('admin.')
 //     ->middleware([])
