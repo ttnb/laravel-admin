@@ -24,8 +24,30 @@ class Roles
     /**
      * Get role list
      */
-    public function getRoles()
+    public function list()
     {
         return (array) @array_keys($this->roles);
+    }
+
+    /**
+     * Get admin access list
+     */
+    public function admins()
+    {
+        $data = array_filter($this->roles, function($role) {
+            return (@$role['admin_access'] === true);
+        });
+        return (array) @array_keys($data);
+    }
+
+    /**
+     * Get admin not access list
+     */
+    public function users()
+    {
+        $data = array_filter($this->roles, function($role) {
+            return (@$role['admin_access'] != true);
+        });
+        return (array) @array_keys($data);
     }
 }

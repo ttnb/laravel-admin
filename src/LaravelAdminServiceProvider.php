@@ -52,20 +52,10 @@ class LaravelAdminServiceProvider extends ServiceProvider
     private function publishVendor()
     {
         if ($this->app->runningInConsole()) {
-            $this->publishConfig();
+            $this->publishes([
+                __DIR__.'/../config/config.php' => config_path('laraveladmin.php')
+            ], 'config');
         }
-    }
-
-    /**
-     * Publish config
-     * 
-     * @return void
-     */
-    private function publishConfig()
-    {
-        $this->publishes([
-            __DIR__.'/../config/config.php' => config_path('laraveladmin.php')
-        ], 'config');
     }
 
     /**
@@ -75,16 +65,7 @@ class LaravelAdminServiceProvider extends ServiceProvider
      */
     private function loadServices()
     {
-        $this->loadRoutes();
-    }
-
-    /**
-     * Load routes service
-     * 
-     * @return void
-     */
-    private function loadRoutes()
-    {
         $this->loadRoutesFrom(__DIR__.'/Routes/routes.php');
+        $this->loadMigrationsFrom(__DIR__.'/Migrations');
     }
 }

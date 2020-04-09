@@ -1,10 +1,11 @@
 <?php
-dd(app('roles'));
-$getRoles = config('laraveladmin.roles');
-$roles = (array) @array_keys($getRoles);
 
-
-// Route::namespace('MySang\LaravelAdmin\Controllers')
-//     ->name('admin')
-//     ->prefix('admin.')
-//     ->middleware([])
+Route::namespace('MySang\LaravelAdmin\Controllers')
+->prefix('admin')
+->name('admin.')
+->middleware([])
+->group(function() {
+    Route::get('/', function() {
+        echo '123';
+    });
+});
