@@ -66,7 +66,7 @@ class LaravelAdminServiceProvider extends ServiceProvider
 
             // Publish assets
             $this->publishes([
-                __DIR__.'/Assets' => public_path('vendor/laraveladmin'),
+                __DIR__.'/../assets' => public_path('vendor/laraveladmin'),
             ], 'public');
         }
     }

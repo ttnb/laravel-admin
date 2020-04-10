@@ -23,7 +23,7 @@ Route::namespace('MySang\LaravelAdmin\Controllers')
 ->name('admin.')
 ->middleware([])
 ->group(function() {
-    Route::get('/', function() {
-        
-    });
+    Route::get('/', 'AdminController@index')
+    ->middleware([])
+    ->name('index');
 });

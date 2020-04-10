@@ -1,0 +1,19 @@
+.elevation-4 {
+    box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    -o-box-shadow: none!important;
+    -ms-box-shadow: none!important;
+}
+
+body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .sidebar {
+    margin-top: calc(2.93725rem + 2px) !important;
+}
+
+.layout-navbar-fixed .wrapper .control-sidebar {
+    top: -1px!important;
+}
+
+body.text-sm .control-sidebar {
+    top: calc(2.93725rem)!important;
+}
