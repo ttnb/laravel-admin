@@ -18,7 +18,7 @@
             "MySang\\LaravelAdmin\\": "src/"
         },
         "files": [
-            "src/Helpers/Helper.php"
+            "src/Helpers/helper.php"
         ]
     },
     "extra": {
