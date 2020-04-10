@@ -12,7 +12,7 @@ class AdminAuthController extends Controller
      */
     public function login()
     {
-        // dd(sangtest());
+        dd(sangtest());
         return view('laraveladmin::auth.login');
     }
 }
