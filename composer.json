@@ -12,6 +12,9 @@
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
+        "files": [
+            "src/Helpers/Helper.php"
+        ],
         "psr-4": {
             "MySang\\LaravelAdmin\\": "src/"
         }

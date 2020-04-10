@@ -1,8 +1,8 @@
 <?php
 
-namespace MySang\LaravelAdmin;
+namespace MySang\LaravelAdmin\Singletons;
 
-class Roles
+class Role
 {
     /**
      * Define list of role

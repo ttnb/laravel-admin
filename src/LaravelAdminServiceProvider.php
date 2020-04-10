@@ -3,10 +3,17 @@
 namespace MySang\LaravelAdmin;
 
 use Illuminate\Support\ServiceProvider;
-use MySang\LaravelAdmin\Roles;
+use MySang\LaravelAdmin\Singletons\Role;
 
 class LaravelAdminServiceProvider extends ServiceProvider
 {
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
+    // protected $defer = true;
+
     /**
      * Register services.
      *
@@ -18,9 +25,9 @@ class LaravelAdminServiceProvider extends ServiceProvider
             __DIR__.'/../config/config.php', 'laraveladmin'
         );
 
-        $this->app->singleton('roles', function () {
-            return new Roles;
-        });
+        // $this->app->singleton('role', function () {
+        //     return new Role;
+        // });
     }
 
     /**
@@ -28,10 +35,10 @@ class LaravelAdminServiceProvider extends ServiceProvider
      *
      * @return array
      */
-    public function provides()
-    {
-        return ['roles'];
-    }
+    // public function provides()
+    // {
+    //     return ['role'];
+    // }
 
     /**
      * Bootstrap services.
@@ -52,9 +59,15 @@ class LaravelAdminServiceProvider extends ServiceProvider
     private function publishVendor()
     {
         if ($this->app->runningInConsole()) {
+            // Publish config
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('laraveladmin.php')
             ], 'config');
+
+            // Publish assets
+            $this->publishes([
+                __DIR__.'/Assets' => public_path('vendor/laraveladmin'),
+            ], 'public');
         }
     }
 
@@ -67,5 +80,6 @@ class LaravelAdminServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__.'/Routes/routes.php');
         $this->loadMigrationsFrom(__DIR__.'/Migrations');
+        $this->loadViewsFrom(__DIR__.'/Views', 'laraveladmin');
     }
 }
