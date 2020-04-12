@@ -3,11 +3,6 @@
 @section('header')
 <div class="d-flex flex-wrap">
     <a href="#" class="btn btn-sm btn-primary text-white">Add new page</a>
-    <a href="#" class="btn btn-sm btn-primary text-white">Add new page dadsadsad</a>
-    <a href="#" class="btn btn-sm btn-primary text-white">Add new page</a>
-    <a href="#" class="btn btn-sm btn-primary text-white">Add new page</a>
-    <a href="#" class="btn btn-sm btn-primary text-white">Add new page zxcxzcxzc</a>
-    <a href="#" class="btn btn-sm btn-primary text-white">Add new pagedasdsadasdasdasdasdasdasda</a>
 </div>
 @stop
 @section('content')
