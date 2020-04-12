@@ -37,21 +37,6 @@
         '<h5>Customize AdminLTE</h5><hr class="mb-2"/>'
     )
 
-    var $fixed_navbar_checkbox = $('<input />', {
-        type: 'checkbox',
-        value: 1,
-        checked: $('body').hasClass('layout-navbar-fixed'),
-        'class': 'mr-1'
-    }).on('click', function () {
-        if ($(this).is(':checked')) {
-            $('body').addClass('layout-navbar-fixed')
-        } else {
-            $('body').removeClass('layout-navbar-fixed')
-        }
-    })
-    var $fixed_navbar_container = $('<div />', { 'class': 'mb-1' }).append($fixed_navbar_checkbox).append('<span>Fixed sidebar</span>')
-    $container.append($fixed_navbar_container)
-
     var $text_sm_body_checkbox = $('<input />', {
         type: 'checkbox',
         value: 1,
