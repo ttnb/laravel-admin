@@ -4,6 +4,7 @@ namespace MySang\LaravelAdmin;
 
 use Illuminate\Support\ServiceProvider;
 use MySang\LaravelAdmin\Singletons\Role;
+use MySang\LaravelAdmin\Singletons\Menu;
 
 class LaravelAdminServiceProvider extends ServiceProvider
 {
@@ -12,7 +13,7 @@ class LaravelAdminServiceProvider extends ServiceProvider
      *
      * @var bool
      */
-    // protected $defer = true;
+    protected $defer = true;
 
     /**
      * Register services.
@@ -25,20 +26,14 @@ class LaravelAdminServiceProvider extends ServiceProvider
             __DIR__.'/../config/config.php', 'laraveladmin'
         );
 
-        // $this->app->singleton('role', function () {
-        //     return new Role;
-        // });
-    }
+        $this->app->singleton('role', function () {
+            return new Role;
+        });
 
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    // public function provides()
-    // {
-    //     return ['role'];
-    // }
+        $this->app->singleton('menu', function () {
+            return new Menu;
+        });
+    }
 
     /**
      * Bootstrap services.

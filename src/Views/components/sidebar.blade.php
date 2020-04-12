@@ -17,13 +17,10 @@
                 <a href="#" class="d-block">Alexander Pierce</a>
             </div>
         </div>
-
-        <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column nav-flat nav-compact" data-widget="treeview" role="menu"
+            <ul class="nav nav-pills nav-sidebar flex-column nav-compact" data-widget="treeview" role="menu"
                 data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-       with font-awesome or any other icon font library -->
+                {!! app('menu')->render() !!}
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -58,7 +55,6 @@
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Widgets
-                            <span class="right badge badge-danger">New</span>
                         </p>
                     </a>
                 </li>
@@ -68,7 +64,6 @@
                         <p>
                             Layout Options
                             <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">6</span>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
@@ -274,7 +269,6 @@
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
                             Calendar
-                            <span class="badge badge-info right">2</span>
                         </p>
                     </a>
                 </li>

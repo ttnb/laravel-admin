@@ -109,8 +109,23 @@
             $('.nav-sidebar').removeClass('nav-compact')
         }
     })
-    var $compact_sidebar_container = $('<div />', { 'class': 'mb-3' }).append($compact_sidebar_checkbox).append('<span>Sidebar nav compact</span>')
+    var $compact_sidebar_container = $('<div />', { 'class': 'mb-1' }).append($compact_sidebar_checkbox).append('<span>Sidebar nav compact</span>')
     $container.append($compact_sidebar_container)
+
+    var $collapse_sidebar_checkbox = $('<input />', {
+        type: 'checkbox',
+        value: 1,
+        checked: $('body').hasClass('sidebar-collapse'),
+        'class': 'mr-1'
+    }).on('click', function () {
+        if ($(this).is(':checked')) {
+            $('body').addClass('sidebar-collapse')
+        } else {
+            $('body').removeClass('sidebar-collapse')
+        }
+    })
+    var $collapse_sidebar_container = $('<div />', { 'class': 'mb-3' }).append($collapse_sidebar_checkbox).append('<span>Collapsed sidebar</span>')
+    $container.append($collapse_sidebar_container)
 
     $container.append('<h6>Navbar Variants</h6>')
 
