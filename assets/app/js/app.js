@@ -10,4 +10,10 @@ $(document).ready(function () {
     nav_link_not_has_treeview.closest('.nav-item.has-treeview').addClass('menu-open')
     nav_link_not_has_treeview.closest('.nav-item.has-treeview').children('.nav-link').addClass('active')
     nav_link_not_has_treeview.addClass('active')
+
+    // Notify remove button
+    $(document).on('click', '.notify button', function(e){
+        e.preventDefault()
+        $(this).closest('.notify').remove();
+    })
 });

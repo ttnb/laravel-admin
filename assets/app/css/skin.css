@@ -53,6 +53,14 @@ body.text-sm .control-sidebar {
     margin-bottom: .4rem;
 }
 
+.btn-xs {
+	padding: .125rem 0.5rem;
+}
+
+.text-sm .content-header {
+    padding: .7rem .5rem .2rem .5rem;
+}
+
 @media screen and (max-width: 767px) {
     .content-header a.btn {
         -ms-flex-positive: 1;
