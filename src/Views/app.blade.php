@@ -38,6 +38,7 @@
             <!-- content -->
             <section class="content">
                 <div class="container-fluid">
+                    @include('laraveladmin::components.notify')
                     @yield('content')
                 </div>
             </section>

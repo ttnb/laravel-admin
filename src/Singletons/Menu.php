@@ -30,16 +30,20 @@ class Menu
      */
     public function render()
     {
+        # return if $menu null
         if (empty($this->menu)) {
             return '';
         }
+        # Define html render variable
         $html = '';
+        # Loop menu
         foreach ($this->menu as $menu) {
             switch (@$menu['type']) {
+                # Type heder
                 case 'header':
                     $html .= '<li class="nav-header">'.@$menu["label"].'</li>';
                     break;
-                
+                # Type item
                 case 'item':
                     $subs = @$menu['sub'];
                     $route = Route::has(@$menu['route']) ? route(@$menu['route']) : '#';
@@ -72,7 +76,7 @@ class Menu
                     }
                     $html .= '</li>';
                     break;
-
+                # Default
                 default:
                     break;
             }

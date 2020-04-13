@@ -12,23 +12,23 @@ return [
     'menu' => [
         [
             'type' => 'item',
-            'label' => 'Dashboard',
+            'label' => 'Bảng tin',
             'route' => 'admin.index',
             'icon' => 'fas fa-tachometer-alt'
         ],
         [
             'type' => 'header',
-            'label' => 'SETTINGS'
+            'label' => 'CÀI ĐẶT HỆ THỐNG'
         ],
         [
             'type' => 'item',
-            'label' => 'Settings',
-            'route' => 'admin.index',
-            'icon' => 'fas fa-tachometer-alt',
+            'label' => 'Cài đặt',
+            'route' => 'admin.settings.index',
+            'icon' => 'fas fa-cogs',
             'sub' => [
                 [
-                    'label' => 'General',
-                    'route' => 'admin.index'
+                    'label' => 'Cài đặt chung',
+                    'route' => 'admin.settings.index'
                 ]
             ]
         ]

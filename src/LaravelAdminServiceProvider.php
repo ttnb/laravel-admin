@@ -54,12 +54,12 @@ class LaravelAdminServiceProvider extends ServiceProvider
     private function publishVendor()
     {
         if ($this->app->runningInConsole()) {
-            // Publish config
+            # Publish config
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('laraveladmin.php')
             ], 'config');
 
-            // Publish assets
+            # Publish assets
             $this->publishes([
                 __DIR__.'/../assets' => public_path('vendor/laraveladmin'),
             ], 'public');

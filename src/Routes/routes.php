@@ -23,7 +23,15 @@ Route::namespace('MySang\LaravelAdmin\Controllers')
 ->name('admin.')
 ->middleware([])
 ->group(function() {
-    Route::get('/', 'AdminController@index')
+    # Dashboard
+    Route::get('/', 'AdminController@index')->middleware([])->name('index');
+
+    # Settings
+    Route::prefix('settings')
+    ->name('settings.')
     ->middleware([])
-    ->name('index');
+    ->group(function() {
+        # Index
+        Route::get('/', 'SettingController@index')->middleware([])->name('index');
+    });
 });
