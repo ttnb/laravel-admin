@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@yield('title')</title>
-
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('vendor/laraveladmin/plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/laraveladmin/lib/ionicons.min.css') }}">
@@ -13,7 +12,6 @@
     <link rel="stylesheet" href="{{ asset('vendor/laraveladmin/lib/source-sans-pro.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/laraveladmin/app/css/skin.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/laraveladmin/app/css/app.css') }}">
-
     @stack('css')
     <!-- js -->
     <script src="{{ asset('vendor/laraveladmin/plugins/jquery/jquery.min.js') }}"></script>

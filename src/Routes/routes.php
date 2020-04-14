@@ -1,6 +1,21 @@
 <?php
 
 /*
+| --------------------------------------------------------------------------
+| Route type
+| --------------------------------------------------------------------------
+|
+| GET	        /photos	                index       photos.index
+| GET	        /photos/create	        create	    photos.create
+| POST	        /photos	                store       photos.store
+| GET	        /photos/{photo}	        show	    photos.show
+| GET	        /photos/{photo}/edit	edit	    photos.edit
+| PUT/PATCH	    /photos/{photo}	        update	    photos.update
+| DELETE	    /photos/{photo}	        destroy	    photos.destroy
+|
+*/
+
+/*
 |--------------------------------------------------------------------------
 | Admin authentication routes
 |--------------------------------------------------------------------------
@@ -33,5 +48,6 @@ Route::namespace('MySang\LaravelAdmin\Controllers')
     ->group(function() {
         # Index
         Route::get('/', 'SettingController@index')->middleware([])->name('index');
+        Route::put('update', 'SettingController@index')->middleware([])->name('update');
     });
 });

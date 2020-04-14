@@ -24,7 +24,7 @@ return [
             'type' => 'item',
             'label' => 'Cài đặt',
             'route' => 'admin.settings.index',
-            'icon' => 'fas fa-cogs',
+            'icon' => 'fas fa-cog',
             'sub' => [
                 [
                     'label' => 'Cài đặt chung',

@@ -13,6 +13,7 @@ class SettingController extends Controller
      */
     public function index(Request $request)
     {
+        // Session::flash('danger', 'dsadsadasdsasadda');
         return view('laraveladmin::settings.index');
     }
 }

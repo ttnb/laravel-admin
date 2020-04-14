@@ -12,8 +12,8 @@ $(document).ready(function () {
     nav_link_not_has_treeview.addClass('active')
 
     // Notify remove button
-    $(document).on('click', '.notify button', function(e){
+    $(document).on('click', '.callout button', function(e){
         e.preventDefault()
-        $(this).closest('.notify').remove();
+        $(this).closest('.callout').remove();
     })
 });
